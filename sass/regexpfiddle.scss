@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+
+/* 
+Peter Lindblom 2012-01-22 
+*/
+
+$body_background_color: #FAFAFA;
+$main_shadow_color: #EFEFEF;
+$main_background_color: #FFFFFF;
+$red_color: #FF0000; 
+
+$helvetica: "helvetica neue", arial, helvetica, freesans, 
+            "liberation sans", "numbus sans l", sans-serif;
+            
+$geneva:    geneva, tahoma, "dejavu sans condensed", 
+            sans-serif;
+
+$lucida:    "lucida grande", "lucida sans unicode", 
+            "lucida sans", lucida, sans-serif;
+            
+$verdana:   verdana, "bitstream vera sans", "dejavu sans", 
+            "liberation sans", geneva, sans-serif;
+            
+$times:     times, "times new roman", "nimbus roman no9 l", 
+            freeserif, "liberation serif", serif;
+            
+$courier:   "courier new", courier, freemono, "nimbus mono l", 
+            "liberation mono", monospace;
+            
+
+@import "reset";
+
+@mixin border_radius($rounding: 5px) {
+	-moz-border-radius: $rounding $rounding;
+	-webkit-border-radius: $rounding $rounding;
+	-khtml-border-radius: $rounding $rounding;
+	-o-border-radius: $rounding $rounding;
+	border-radius: $rounding $rounding;
+}	
+
+@mixin box_shadow($offset, $blur_distance, $color) {
+	-moz-box-shadow: $offset $offset $blur_distance $blur_distance $color;
+	-webkit-box-shadow: $offset $offset $blur_distance $blur_distance $color;
+	box-shadow: $offset $offset $blur_distance $blur_distance $color;
+}
+
+body {
+	background-color: $body_background_color;
+	font-family: $courier;
+	font-size: 12pt
+}
+
+h1{
+	margin:5px 0;
+	font-size: 42pt;
+}
+
+h3 {
+	margin:5px 0;
+}
+
+h3 label{
+	font-size: 16pt;
+}
+
+p a {
+	text-decoration: none;
+	color: #000
+}
+
+.main {
+	margin: 30px auto;
+	padding: 5px;
+	width: 1000px;
+	@include border_radius (5px);
+	@include box_shadow (0, 5px, $main_shadow_color);
+	background-color: $main_background_color;
+}
+
+.main .center {
+	margin: 5px 10px;
+	text-align: center;
+}
+
+.main .left {
+	margin: 5px 0;
+	text-align: left;
+}
+
+.main div.container textarea, .main div.container div{
+	border: 1px solid #cccccc;
+	margin: 0;
+	padding: 5px;
+	width: 988px;
+	height: 150px;
+	font-family: monospace;
+	color: #000;
+	overflow: auto;
+	@include border_radius (5px);
+	background-color: $main_background_color;
+	
+}
+
+.main #regexpContainer.container textarea {
+	height: 100px;	
+}
+
+.main #resultContainer div{
+	background-color: $body_background_color;
+}
+
+.main #resultContainer div span {
+	color:$red_color;
+	text-decoration:underline;
+	font-weight: bold;
+}
+
+.main .container input[type='checkbox']{
+	margin:5px 5px 0 0;	
+}
+
+.main p input[type='button'] {
+	margin: 0;
+	border: 1px solid #008000;
+	padding: 5px;
+	width: 800px;
+	height: 30px;
+	background-color: #90EE90;	
+	@include border_radius (5px);
+}
+
+.main p input[type='button']#reset {
+	margin: 0;
+	border: 1px solid #008000;
+	padding: 5px;
+	width: 400px;
+	height: 30px;
+	background-color: $body_background_color;	
+	@include border_radius (5px);
+}
+
+.main #errors.center {
+	color: $red_color;
+	margin: 5px 10px;
+	text-align: center;
+}
+

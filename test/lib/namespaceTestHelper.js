@@ -1,0 +1,1 @@
+com = {minlinuxserver:{object:true}};
