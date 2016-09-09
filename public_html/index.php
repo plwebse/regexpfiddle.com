@@ -63,7 +63,6 @@ function getElementById(id) {
 function getFormValueById(id) {
 	"use strict";
 	if (getElementById(id)) {
-		debugger
 		return getElementById(id).value;
 	}
 	return "";
