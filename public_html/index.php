@@ -1,7 +1,7 @@
 <?php
 
-if($_SERVER["SERVER_NAME"] != "regexpfiddle.com" && $_SERVER["SERVER_NAME"] != "localhost"){
-        header("location: http://regexpfiddle.com", TRUE, 301);
+if($_SERVER["SERVER_NAME"] != "regexpfiddle.plweb.se" && $_SERVER["SERVER_NAME"] != "localhost"){
+        header("location: http://regexpfiddle.plweb.se", TRUE, 301);
 }
 
 function mdate($file){
@@ -21,8 +21,8 @@ ob_start();
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Regular Expression RegExp " />
-    <meta name="description" content="RegExpFiddle.com is a simple web service for you to try out some of your regular expression." />    
-    <title>RegExpFiddle.com</title>
+    <meta name="description" content="RegExpFiddle.plweb.se is a simple web service for you to try out some of your regular expression." />    
+    <title>RegExpFiddle.plweb.se</title>
     <link href="css/regexpfiddle.css<?php echo mdate("css/regexpfiddle.css");?>" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="js/regexpfiddle.js<?php echo mdate("js/regexpfiddle.js");?>"></script>
     <script type="text/javascript" src="js/ls.js<?php echo mdate("js/ls.js");?>"></script>
@@ -32,7 +32,7 @@ var regExpId = "regexp",
 	testValueId = "testvalue",
 	testResultId = "testresult",
 	errorsId = "errors",
-	documentTitle = "RegExpFiddle.com",
+	documentTitle = "RegExpFiddle.plweb.se",
 	mailId="mailId";
 
 function profileStart(){
